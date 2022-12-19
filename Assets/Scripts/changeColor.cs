@@ -13,6 +13,7 @@ public class changeColor : MonoBehaviour
 
     public void Placed()
     {
+<<<<<<< HEAD
         SerializedObject halo = new SerializedObject(GetComponent("Halo"));
         halo.FindProperty("m_Enabled").boolValue = _isEnabled;
         halo.FindProperty("m_Color").colorValue = _color;
@@ -27,6 +28,10 @@ public class changeColor : MonoBehaviour
         //     notPlaced();
         // }
         halo.ApplyModifiedProperties();
+=======
+        //Behaviour halo=(Behaviour)GetComponent("Halo");
+        //halo.size=10;
+>>>>>>> 90cfd46e5e5403d5e6da3905b3dda3472be8bc8d
     }
 
     public void notPlaced()

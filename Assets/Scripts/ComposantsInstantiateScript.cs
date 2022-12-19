@@ -21,7 +21,7 @@ public class ComposantsInstantiateScript : MonoBehaviour
             Debug.Log("Max de l'objet atteint");
         }
     }
-    public void ObjectInstantiate(){
+    void ObjectInstantiate(){
         Instantiate(objet,parent.transform);
     }
 }
