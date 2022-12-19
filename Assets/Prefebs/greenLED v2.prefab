@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!54 &6374532405554961957
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724892035078569229}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!136 &564584760
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14,6 +30,18 @@ CapsuleCollider:
   m_Height: 21.800095
   m_Direction: 1
   m_Center: {x: 0, y: -5, z: 0}
+--- !u!122 &5853664544157665657
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724892035078569229}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278779761
+  m_Size: 10
 --- !u!114 &564584757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 262f5e5d763d639499f83b4057517fd0,
         type: 3}
       propertyPath: m_Name
-      value: greenLED v1
+      value: greenLED v2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 262f5e5d763d639499f83b4057517fd0, type: 3}

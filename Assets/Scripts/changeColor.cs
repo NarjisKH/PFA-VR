@@ -7,8 +7,8 @@ public class changeColor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Behaviour halo=(Behaviour)GetComponent("Halo");
-        halo.size=10;
+        //Behaviour halo=(Behaviour)GetComponent("Halo");
+        //halo.size=10;
     }
 
     // Update is called once per frame
