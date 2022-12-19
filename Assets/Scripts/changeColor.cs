@@ -1,22 +1,56 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class changeColor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private bool _isEnabled = true;
+    [SerializeField] private bool _isNotEnabled = false;
+    [SerializeField] private Color _color = Color.green;
+    [SerializeField] private float _size = 10;
+
+
+    public void Placed()
     {
-        Behaviour halo=(Behaviour)GetComponent("Halo");
-        halo.size=10;
+        SerializedObject halo = new SerializedObject(GetComponent("Halo"));
+        halo.FindProperty("m_Enabled").boolValue = _isEnabled;
+        halo.FindProperty("m_Color").colorValue = _color;
+        halo.FindProperty("m_Size").floatValue = _size;
+        // if(collisionInfo.collider.name=="res1"){
+        //     halo.FindProperty("m_Size").floatValue = 10;
+        // }
+        // if(collisionInfo.collider.name=="res2"){
+        //     halo.FindProperty("m_Size").floatValue = 5;
+        // }
+        // else{
+        //     notPlaced();
+        // }
+        halo.ApplyModifiedProperties();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void notPlaced()
     {
-        
+        SerializedObject halo = new SerializedObject(GetComponent("Halo"));
+        halo.FindProperty("m_Enabled").boolValue = _isNotEnabled;
+        halo.ApplyModifiedProperties();
     }
 }
+
+// {
+//     // Start is called before the first frame update
+//     void Start()
+//     {
+//         // Behaviour halo=(Behaviour)GetComponent("Halo");
+//         // halo.size=10;
+//     }
+
+//     // Update is called once per frame
+//     void Update()
+//     {
+        
+//     }
+// }
 
 
 /*
