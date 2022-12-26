@@ -7,9 +7,13 @@ public class DetectionScript : MonoBehaviour
         print("Another object has entered the trigger");
         ( (Behaviour)other.GetComponent("Halo")).enabled =true;  
     }
-    void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
+    {
+        ((Behaviour)other.GetComponent("Halo")).enabled = false;
+    }
+    /*void OnTriggerExit(Collider other)
     {
         // Destroy everything that leaves the trigger
         print("Exited");  
-    } 
+    } */
 }
