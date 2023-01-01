@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destinationTag: DropArea
+  rotationSpeed: 50
 --- !u!122 &5410236459083857799
 Halo:
   m_ObjectHideFlags: 0
@@ -126,17 +127,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 262f5e5d763d639499f83b4057517fd0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 262f5e5d763d639499f83b4057517fd0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 262f5e5d763d639499f83b4057517fd0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 262f5e5d763d639499f83b4057517fd0,
         type: 3}
@@ -151,12 +152,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 262f5e5d763d639499f83b4057517fd0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 262f5e5d763d639499f83b4057517fd0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 262f5e5d763d639499f83b4057517fd0,
         type: 3}
