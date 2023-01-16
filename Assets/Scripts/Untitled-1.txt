@@ -1,0 +1,68 @@
+
+
+var y=0
+for(int i=0; i<words.length(); i++){
+    var found=0;
+	for(j=0; j<letters.length(); j++){
+		if (words[i].indexOf(letters.charAt(j)))
+			found=1;
+    }
+    if(found){
+        filter[y]=words[i];
+        y++
+    }
+}
+
+y=0
+i=0
+words [0] = the
+found =0
+j=0
+letters.charAt(0)=a 
+found=0
+j=1
+letters.charAt(0)=e
+found=1
+filter[0]=words[0]
+y=1
+
+
+y=1
+i=1
+words [1] = dog
+found =0
+j=0
+letters.charAt(0)=a 
+found=0
+j=1
+letters.charAt(0)=e
+found=0
+y=1
+
+
+findSumPair(int [] numbers,int k){
+    int[] smia= new int[2];
+    smia[0]=0;
+    smia[1]=0;
+    for(int i=0; i<numbers.length-1; i++){
+        for(j=i+1; j<numbers.length; j++){
+            if (numbers[i]+numbers[j]==k){
+                smia[0]=i;
+                smia[1]=j;
+                return smia;
+            }
+                
+        }
+    }
+    return smia;
+}
+
+
+
+
+
+
+
+
+
+

@@ -44,12 +44,12 @@ private void Awake(){
         LoadingCache = Loading;
     }
     if(GetIpOnAwake){
-        StartCoroutine(GetIP());
+        //StartCoroutine(GetIP());
     }
 
     _Descrip = Description;
-    OnLogin += onLogin;
-    StartCoroutine(FadeOut());
+    //OnLogin += onLogin;
+    //StartCoroutine(FadeOut());
 
         if (GameObject.Find(SavedUser) == null)
         {
@@ -59,8 +59,21 @@ private void Awake(){
         }
         else
         {
-            saveInfo = null;
+            saveInfo = GameObject.Find("PlayerInfo").GetComponent<SaveInfo>();
         }
-}
-    
+    }
+
+    void OnDisable()
+    {
+        //OnLogin -= onLogin;
+    }
+
+    void ShowLogin()
+    {
+        if (!InLogin)
+        {
+            InLogin = true;
+            LoginAnimation.Play("");
+        }
+    }
 }

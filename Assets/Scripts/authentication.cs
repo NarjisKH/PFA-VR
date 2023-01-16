@@ -47,12 +47,12 @@ public class authentification : MonoBehaviour
         }
         if (GetIpOnAwake)
         {
-            StartCoroutine(GetIP());
+            //StartCoroutine(GetIP());
         }
 
         _Descrip = Description;
-        OnLogin += onLogin;
-        StartCoroutine(FadeOut());
+        //OnLogin += onLogin;
+        //StartCoroutine(FadeOut());
 
         if (GameObject.Find(SavedUser) == null)
         {
@@ -68,7 +68,7 @@ public class authentification : MonoBehaviour
 
     void OnDisable()
     {
-        OnLogin -= onLogin;
+        //OnLogin -= onLogin;
     }
 
     void ShowLogin()
