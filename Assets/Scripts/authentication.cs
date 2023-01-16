@@ -7,6 +7,7 @@ using UnityEngine.XR.WSA.Input;
 
 public class authentification : MonoBehaviour
 {
+<<<<<<< HEAD
     public delegate void LoginEvent(string name, string email, int status, string ip);
 
     public static LoginEvent OnLogin;
@@ -79,4 +80,6 @@ public class authentification : MonoBehaviour
             LoginAnimation.Play("");
         }
     }
+=======
+>>>>>>> 782b024f630091e907a04e5d6499ad3dd16b5856
 }

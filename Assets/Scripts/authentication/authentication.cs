@@ -7,6 +7,7 @@ using UnityEngine.XR.WSA.Input;
 
 public class authentication : MonoBehaviour
 {
+    /*
     public delegate void LoginEvent(string name, string email, int status, string ip);
     
     public static LoginEvent OnLogin;
@@ -37,7 +38,7 @@ private bool InLogin = true;
 private bool ShowInfo = false; 
 private SaveInfo saveInfo = null;
 
-private void Awake(){
+//private void Awake(){
 
     IP = string.Empty;
     if(Loading !=null){
@@ -61,6 +62,7 @@ private void Awake(){
         {
             saveInfo = GameObject.Find("PlayerInfo").GetComponent<SaveInfo>();
         }
+<<<<<<< HEAD
     }
 
     void OnDisable()
@@ -77,3 +79,8 @@ private void Awake(){
         }
     }
 }
+=======
+}
+    */
+}
+>>>>>>> 782b024f630091e907a04e5d6499ad3dd16b5856
