@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class DropAreaHoverScript : MonoBehaviour
+public class DropAreaHoverScript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public string name = "00";
     private Color color;
@@ -14,17 +12,18 @@ public class DropAreaHoverScript : MonoBehaviour
         //textMsg = GetComponent<TextMeshProUGUI>();
         color = GetComponent<Renderer>().material.color;
     }
-    void OnMouseOver()
+    void IPointerEnterHandler.OnPointerEnter (PointerEventData eventData)
     {
         GetComponent<Renderer>().material.color = new Color(0, 255, 0);
         textMsg.text = "hover sur le trou " + name;
         Debug.Log("Mouse is over GameObject.");
     }
 
-    void OnMouseExit()
+    void IPointerExitHandler.OnPointerExit (PointerEventData eventData)
     {
         GetComponent<Renderer>().material.color = color;
         textMsg.text = "indication";
         Debug.Log("Mouse is no longer on GameObject.");
     }
+
 }
