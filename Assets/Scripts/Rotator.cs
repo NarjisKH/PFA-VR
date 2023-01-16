@@ -9,6 +9,6 @@ public class Rotator : MonoBehaviour
     {
         // The game object has been selected.
         // You can add code here to start rotating the object.
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+        //transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
 }

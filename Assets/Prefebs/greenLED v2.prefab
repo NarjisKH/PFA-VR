@@ -70,7 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2272f1b9001f1e9478a61c2fa4e5f87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  led: {fileID: 2724892035078569229}
 --- !u!114 &564584757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +80,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94acd0bef94d17d428ba0d015f18f07c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destinationTag: DropArea
+  rotationSpeed: 50
+--- !u!114 &-2623243745445174735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724892035078569229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5320ebc47ba3614e91a825d614484c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destinationTag: DropArea
@@ -110,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isEnabled: 1
+  _isNotEnabled: 0
   _color: {r: 0, g: 1, b: 0, a: 1}
   _size: 10
 --- !u!1001 &2959334513457168476
