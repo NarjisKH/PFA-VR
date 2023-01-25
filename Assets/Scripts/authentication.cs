@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class authentification : MonoBehaviour
 {
-<<<<<<< HEAD
     public delegate void LoginEvent(string name, string email, int status, string ip);
 
     public static LoginEvent OnLogin;
@@ -21,9 +20,9 @@ public class authentification : MonoBehaviour
     [Header("Ip Settings")]
     public bool GetIpOnAwake = true;
 
-    [Header("UI")]
-    public Text Description = null;
-    private static Text _Descrip = null;
+    //[Header("UI")]
+   // public Text Description = null;
+    //private static Text _Descrip = null;
 
     [Header("Scripts and their Refrences")]
     public LoadingEffect Loading = null;
@@ -49,7 +48,7 @@ public class authentification : MonoBehaviour
             //StartCoroutine(GetIP());
         }
 
-        _Descrip = Description;
+        //_Descrip = Description;
         //OnLogin += onLogin;
         //StartCoroutine(FadeOut());
 
@@ -78,6 +77,4 @@ public class authentification : MonoBehaviour
             LoginAnimation.Play("");
         }
     }
-=======
->>>>>>> 782b024f630091e907a04e5d6499ad3dd16b5856
 }
