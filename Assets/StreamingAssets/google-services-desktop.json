@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1033946636973",
+    "firebase_url": "https://salle-tp-mr-default-rtdb.firebaseio.com",
+    "project_id": "salle-tp-mr",
+    "storage_bucket": "salle-tp-mr.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033946636973:android:acc594cac8f4f1f4865c24",
+        "android_client_info": {
+          "package_name": "ma.emsi.salletpmr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033946636973-6pfo8jqagqgoq5uaqnah89129vcpdudh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyWag5JY_N1MIS8zIkNfE78CreTyI42lo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033946636973-6pfo8jqagqgoq5uaqnah89129vcpdudh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
