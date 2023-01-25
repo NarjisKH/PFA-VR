@@ -42,12 +42,12 @@ private SaveInfo saveInfo = null;
         LoadingCache = Loading;
     }
     if(GetIpOnAwake){
-        StartCoroutine(GetIP());
+        //StartCoroutine(GetIP());
     }
 
     _Descrip = Description;
-    OnLogin += onLogin;
-    StartCoroutine(FadeOut());
+    //OnLogin += onLogin;
+    //StartCoroutine(FadeOut());
 
         if (GameObject.Find(SavedUser) == null)
         {
@@ -57,8 +57,27 @@ private SaveInfo saveInfo = null;
         }
         else
         {
-            saveInfo = null;
+            saveInfo = GameObject.Find("PlayerInfo").GetComponent<SaveInfo>();
         }
+<<<<<<< HEAD
+    }
+
+    void OnDisable()
+    {
+        //OnLogin -= onLogin;
+    }
+
+    void ShowLogin()
+    {
+        if (!InLogin)
+        {
+            InLogin = true;
+            LoginAnimation.Play("");
+        }
+    }
+}
+=======
 }
     */
 }
+>>>>>>> 782b024f630091e907a04e5d6499ad3dd16b5856
