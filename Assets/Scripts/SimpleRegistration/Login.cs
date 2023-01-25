@@ -19,8 +19,8 @@ public class Login : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        loginButton.onClick.AddListener(login);
-        goToRegisterButton.onClick.AddListener(moveToRegister);
+        this.loginButton.onClick.AddListener(login);
+        this.goToRegisterButton.onClick.AddListener(moveToRegister);
 
         if (File.Exists(Application.dataPath + "/credentials.txt"))
         {
