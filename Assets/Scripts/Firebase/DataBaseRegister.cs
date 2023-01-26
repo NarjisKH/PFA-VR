@@ -7,10 +7,17 @@ using TMPro;
 using Firebase.Extensions;
 using System;
 
-public class DataBaseManager : MonoBehaviour
+public class DataBaseRegister : MonoBehaviour
 {
     [SerializeField] private TMP_InputField username;
     [SerializeField] private TMP_InputField password;
+    [SerializeField] private TMP_InputField confirmpassword;
+    [SerializeField] private TMP_InputField nom;
+    [SerializeField] private TMP_InputField prenom;
+    [SerializeField] private TMP_Dropdown annee ;
+    [SerializeField] private TMP_Dropdown classe ;
+    [SerializeField] private GameObject infobox;
+    [SerializeField] private TMP_Text infotext;
 
     private DatabaseReference dbReference;
     // Start is called before the first frame update
@@ -20,6 +27,7 @@ public class DataBaseManager : MonoBehaviour
         dbReference = FirebaseDatabase.DefaultInstance.RootReference;
 
     }
+
     public void createUser()
     {
         string userID = Guid.NewGuid().ToString();
@@ -27,7 +35,12 @@ public class DataBaseManager : MonoBehaviour
             || username.text == "" || password.text == ""
         )
         {
-            Debug.Log("username and passeword can't be empty or null");
+            //Debug.Log("username and passeword can't be empty or null");
+            info("username and passeword can't be empty or null");
+            return;
+        }
+        if(password.text != confirmpassword.text){
+            Debug.Log("passwords don't match");
             return;
         }
         var usersData = dbReference.Child("users").GetValueAsync().ContinueWithOnMainThread(task =>
@@ -49,7 +62,7 @@ public class DataBaseManager : MonoBehaviour
                     Debug.Log("" + dictUser["username"] + " - " + dictUser["pwd"]);
                     if (username.text == dictUser["username"].ToString())
                     {
-                        Debug.Log("username already taken or server error");
+                        info("username already taken or server error");
                         exist = true;
                         break;
                     }
@@ -58,14 +71,35 @@ public class DataBaseManager : MonoBehaviour
             }
             if (!exist)
             {
-                User newUser = new User(username.text, password.text);
+                User newUser = new User(username.text, password.text,
+                nom.text, prenom.text,
+                annee.options[annee.value].text, classe.options[classe.value].text);
                 string json = JsonUtility.ToJson(newUser);
                 dbReference.Child("users").Child(userID).SetRawJsonValueAsync(json);
-                Debug.Log(" user created ");
+                inputreset();
+                info(" user created ");
             }
         });
 
     }
+
+    private void info(string msg)
+    {
+        infobox.SetActive(true);
+        infotext.text = msg;
+    }
+
+    private void inputreset()
+    {
+        username.text = "";
+        password.text = "";
+        confirmpassword.text = "";
+        nom.text = "";
+        prenom.text = "";
+        annee.value = 0;
+        classe.value = 0;
+    }
+
     /*
         private bool exists(String username)
         {
