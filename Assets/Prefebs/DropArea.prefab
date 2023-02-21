@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3551046752292325952}
   - component: {fileID: 2470269143287967965}
   - component: {fileID: 3373276088222053738}
+  - component: {fileID: 1649479604449715697}
   m_Layer: 0
   m_Name: DropArea
   m_TagString: DropArea
@@ -91,5 +92,19 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 2, z: 4}
-  m_Center: {x: 0.1, y: 0, z: 0.1}
+  m_Size: {x: 1.1551437, y: 1.1886897, z: 1.1252751}
+  m_Center: {x: -0.005367279, y: 0.01580453, z: -0.026825786}
+--- !u!114 &1649479604449715697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262888548655862647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c8daf3302639c4b8cef97627530ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Posname: 0
+  textMsg: {fileID: 0}
