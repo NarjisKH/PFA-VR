@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,21 +7,17 @@ public class DragDropScript : MonoBehaviour
     Vector3 offset;
     public string destinationTag = "DropArea";
     public float rotationSpeed = 50.0f;
-
     void OnMouseDown()
     {
         offset = transform.position - MouseWorldPosition();
         transform.GetComponent<Collider>().enabled = false;
         //transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
- 
     void OnMouseDrag()
     {
-        
         if (Input.GetKey(KeyCode.E))
         {
             float Xaxisrotation = Input.GetAxis("Mouse X") * rotationSpeed;
-
             float Yaxisrotation = Input.GetAxis("Mouse Y") * rotationSpeed;
             transform.Rotate(Vector3.down, Xaxisrotation);
             transform.Rotate(Vector3.right, Yaxisrotation);
@@ -31,7 +27,6 @@ public class DragDropScript : MonoBehaviour
             transform.position = MouseWorldPosition() + offset;
         }
     }
- 
     void OnMouseUp()
     {
         var rayOrigin = Camera.main.transform.position;

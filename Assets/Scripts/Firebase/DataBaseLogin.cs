@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Firebase;
@@ -14,7 +14,6 @@ public class DataBaseLogin : MonoBehaviour
     [SerializeField] private TMP_InputField password;
     [SerializeField] private GameObject infobox;
     [SerializeField] private TMP_Text infotext;
-
     private DatabaseReference dbReference;
     // Start is called before the first frame update
     void Start()
@@ -23,7 +22,6 @@ public class DataBaseLogin : MonoBehaviour
         dbReference = FirebaseDatabase.DefaultInstance.RootReference;
 
     }
-
     public void loginUser()
     {
         if (username.text == null || password.text == null
@@ -59,7 +57,6 @@ public class DataBaseLogin : MonoBehaviour
                         break;
                     }
                 }
-
             }
             if (!exist)
             {
@@ -69,7 +66,6 @@ public class DataBaseLogin : MonoBehaviour
         });
 
     }
-
     private void info(string msg)
     {
         infobox.SetActive(true);
