@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ExperimentScene.unity
     guid: 50c6d1f4876221847a45c169fe75ca57
+  - enabled: 1
+    path: Assets/Scenes/sallesScene.unity
+    guid: 55ac9bc9e3809bf40bd0d9374f5d28d0
   m_configObjects: {}

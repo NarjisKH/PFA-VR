@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using Firebase;
 using Firebase.Database;
 //using Firebase.Unity.Editor;
@@ -13,6 +14,7 @@ public class ButtonList : MonoBehaviour
     
     [SerializeField] private GameObject buttonPrefab; // Prefab for the button that will be generated
     private DatabaseReference databaseRef; // Reference to the Firebase Realtime Database
+
 
     void Awake()
     {
@@ -61,6 +63,7 @@ public class ButtonList : MonoBehaviour
 
                     // Set the button text to the scene name
                     button.GetComponentInChildren<TextMeshProUGUI>().text = sceneData["titre"].ToString();
+                    button.GetComponent<SceneInformation>().SetInformation(sceneData);
 
                     // Add an onclick listener to the button
                     button.onClick.AddListener(() => {
@@ -69,4 +72,5 @@ public class ButtonList : MonoBehaviour
                         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
                     });
     }
+    
 }
